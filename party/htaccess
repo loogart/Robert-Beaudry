@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^party
+RewriteRule (.*) https://projects.invisionapp.com/boards/5H33BUI6MGNCY/ [L]
