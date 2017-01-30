@@ -11,7 +11,7 @@
 
     <title>50 Shades of Beaudry</title>
 
-       <!-- Add to homescreen for Chrome on Android -->
+    <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="party/images/favicon.png">
 
@@ -19,15 +19,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="50 Shades of Beaudry">
-    <link rel="apple-touch-icon-precomposed"  href="party/images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="party/images/favicon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="party/images/favicon.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon"  href="party/images/favicon.png">
-   
-   
+    <link rel="shortcut icon" href="party/images/favicon.png">
+    
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/zoom.css" rel="stylesheet">
@@ -40,43 +41,61 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
     <style>
-        html, body{
-            width:100%;
-            height:100%;
+        html,
+        body {
+            width: 100%;
+            height: 100%;
         }
+        h1, h2, h3 p{
+            font-family: 'Raleway', sans-serif;
+        }
+        
         .carousel {
-            height: 75vh;
+            height: 100vh;
         }
         
         .carousel .item {
-            height: 75vh;
+            height: 100vh;
         }
         
         .img-carousel {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top;
-            height: 75vh;
+            height: 100vh;
         }
         
         .j1 {
             color: #fff;
             text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-            padding: 25% 15%;
+            padding: 27% 15%;
             letter-spacing: 3px;
         }
         
         .j1 h1 {
             text-transform: uppercase;
+            font-weight: bold;
         }
         
         .j1 h3 {
             text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
         }
+        section.story {
+            padding:7% 0;
+        }
+        section.story p{
+            font-size: 22px;
+            line-height: 28px;
+            color:#929292;
+            margin:20px auto;
+        }
+        section.story a{
+            color:#4db44d;
+        }
         
         .lazy {
             width: 100%;
-            height:100%;
+            height: 100%;
         }
         /* fluid 5 columns */
         
@@ -85,28 +104,31 @@
             width: 33.33%;
             padding: 8px;
         }
-                
         /* 2 columns */
         
         .grid-item--width2 {
             width: 66.67%;
             padding: 8px;
         }
-        @media (max-width:767px){
-                   .grid-sizer,
-        .grid-item {
-            width: 100%;
-            padding: 8px;
-        }
-                
-        /* 2 columns */
         
-        .grid-item--width2 {
-            width: 100%;
-            padding: 8px;
-        } 
+        @media (max-width:767px) {
+            .j1 {
+                color: #fff;
+                text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+                padding: 35% 15%;
+                letter-spacing: 3px;
+            }
+            .grid-sizer,
+            .grid-item {
+                width: 100%;
+                padding: 8px;
+            }
+            /* 2 columns */
+            .grid-item--width2 {
+                width: 100%;
+                padding: 8px;
+            }
         }
-
     </style>
 
 
@@ -118,7 +140,7 @@
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom:0">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -128,12 +150,22 @@
         <div class="carousel-inner" role="listbox">
             <div class="jumbotron item active img-carousel text-center j1" style="background-image:url('dist/img/7_heisenbeaud.jpg');">
                 <div class="container">
-                    <h1> 50 Shades of Beaudry</h1>
-                    <h3>Brought to you by your Friends at Global Affairs Canada &amp; Loogart.com</h3>
+                    <h1>50 Shades of Beaudry</h1>
+                    <h3 class="hidden-xs">Say my name.</h3>
                 </div>
             </div>
-            <div class="item img-carousel" style="background-image:url('dist/img/25_marylin-beaudroe.jpg');"></div>
-            <div class="item img-carousel" style="background-image:url('dist/img/34_beaud-lee.jpg');"></div>
+            <div class="jumbotron item img-carousel img-carousel text-center j1" style="background-image:url('dist/img/25_marylin-beaudroe.jpg');">
+                <div class="container">
+                    <h1>Marilyn Beaudroe</h1>
+                    <h3 class="hidden-xs">Happy birthday Mr. President...</h3>
+                </div>
+            </div>
+            <div class="jumbotron item img-carousel img-carousel text-center j1" style="background-image:url('dist/img/34_beaud-lee.jpg');">
+                <div class="container">
+                    <h1>Beau Lee</h1>
+                    <h3 class="hidden-xs">Enter the InnoLab.</h3>
+                </div>
+            </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -152,66 +184,119 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container-fluid">
+        <section class="story">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>Hi Robert ;)</h2>
+                    <p><i>50 Shades of Beaudry</i> chronicles fifty days of Robert Beaudry's alter egos brought to you by your friends at Global Affairs Canada. This collection is dedicated to an awesome colleagueand friend, Robert Beaudry. <a href="https://twitter.com/search?q=%23govlife&src=typd" target="_blank">#GovLife</a></p>
+                </div> 
+            </div>
+        </section>
         <div class="grid">
             <!-- width of .grid-sizer used for columnWidth -->
             <div class="grid-sizer"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/1_stick-together.jpg" data-action="zoom"><h6>Stick Together</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/2_flock-of-beaudry.jpg" data-action="zoom"><h6>Flock of Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/3_weekrob.jpg" data-action="zoom"><h6>The WeekRb</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/4_ziggy-beaudust.jpg" data-action="zoom"><h6>Ziggy Beaudust</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/5_pharell-beaudry.jpg" data-action="zoom"><h6>Pharell Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/6_rob-jagger.jpg" data-action="zoom"><h6>Rob Jagger</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/7_heisenbeaud.jpg" data-action="zoom"><h6>Heisenbeaudy</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/8_hebeaud.jpg" data-action="zoom"><h6>HeBeaud</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/9_boy-beaudry-and-culture-club.jpg" data-action="zoom"><h6>Boy Beaudry and the Culture Club</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/10_beauhol.jpg" data-action="zoom"><h6>Rob Beauhol</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/11_rob-jobs.jpg" data-action="zoom"><h6>Rob Jobs</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/12_termibeaudry.jpg" data-action="zoom"><h6>Termibeaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/13_kim_beaud-ill.jpg" data-action="zoom"><h6>Kim Beaud Ill</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/14_robin.jpg" data-action="zoom"><h6>Rob-in.</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/15_willy-beaudry.jpg" data-action="zoom"><h6>Willy Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/16_beaudry-time.jpg" data-action="zoom"><h6>Beaudry Time</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/17_rob-daly.jpg" data-action="zoom"><h6>Rob Daly</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/18_rob-beaud.jpg" data-action="zoom"><h6>Beaud. Rob Beaud.</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/19_razor-robert.jpg" data-action="zoom"><h6>Razor Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/20_beaudney-spears.jpg" data-action="zoom"><h6>Beaudney Spears: Oops, Beaud did it again...</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/21_beaudrat.jpg" data-action="zoom"><h6>Beaudrat</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/22_grease_beaudry.jpg" data-action="zoom"><h6>Grease Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/23_elf-beaudry.jpg" data-action="zoom"><h6>Elf Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/24_slim-beaudry.jpg" data-action="zoom"><h6>Slim Beaudry</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/25_marylin-beaudroe.jpg" data-action="zoom"><h6>Marilyn Beaudroe</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/26_pope-beaudry.jpg" data-action="zoom"><h6>Pope Beaudris</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/27_Dr-Beaudevil.jpg" data-action="zoom"><h6>Dr. BeaudrEvil</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/28_ironrob.jpg" data-action="zoom"><h6>IronRob</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/29_tybeaudrion.jpg" data-action="zoom"><h6>Tybaudrion</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/30_roberto-beauscobar.jpg" data-action="zoom"><h6>Roberto Beauscobar</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/31_beaudresus.jpg" data-action="zoom"><h6>Beaudresus</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/32_retirement-hobbies.jpg" data-action="zoom"><h6>Retirement hobbies</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/33_mr-B.jpg" data-action="zoom"><h6>Mr. B</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/34_beaud-lee.jpg" data-action="zoom"><h6>Bead Lee</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/35_muhammad-beaudry.jpg" data-action="zoom"><h6>Muhammad Beaudli</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/36_beaud-dogg.jpg" data-action="zoom"><h6>Beaud Dogg</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/37_whos-beaud.jpg" data-action="zoom"><h6>Who's Beaud?!</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/38_robert-simmons.jpg" data-action="zoom"><h6>Robert Simmons</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/39_beaudrump.jpg" data-action="zoom"><h6>Beaudrump</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/40_helen-beaudley.jpg" data-action="zoom"><h6>Helen Beaudley</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/41_captain-beaud.jpg" data-action="zoom"><h6>Captain Beaud</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/42_clint-beaudwood.jpg" data-action="zoom"><h6>Clint Beaudwood</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/42_beau-sparrow.jpg" data-action="zoom"><h6>Beau Sparrow</h6></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/43_kung-beaudry.jpg" data-action="zoom"><h6>Beaufury</h6></div>
-            <!--<div class="grid-item"><img class="img-responsive lazy" src="dist/img/44_the-beauding.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/45_joker-beaudry.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/46_beaudron.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/48_beaudry-with-children.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/49_beaudgun.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/50_beaud-mcqueen.jpg" data-action="zoom"></div>
-            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/51_time-person-of-the-year-beaudry.jpg" data-action="zoom"></div>-->
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/1_stick-together.jpg" data-action="zoom">
+                <h6>Stick Together</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/2_flock-of-beaudry.jpg" data-action="zoom">
+                <h6>Flock of Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/3_weekrob.jpg" data-action="zoom">
+                <h6>The WeekRb</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/4_ziggy-beaudust.jpg" data-action="zoom">
+                <h6>Ziggy Beaudust</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/5_pharell-beaudry.jpg" data-action="zoom">
+                <h6>Pharell Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/6_rob-jagger.jpg" data-action="zoom">
+                <h6>Rob Jagger</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/7_heisenbeaud.jpg" data-action="zoom">
+                <h6>Heisenbeaudy</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/8_hebeaud.jpg" data-action="zoom">
+                <h6>HeBeaud</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/9_boy-beaudry-and-culture-club.jpg" data-action="zoom">
+                <h6>Boy Beaudry and the Culture Club</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/10_beauhol.jpg" data-action="zoom">
+                <h6>Rob Beauhol</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/11_rob-jobs.jpg" data-action="zoom">
+                <h6>Rob Jobs</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/12_termibeaudry.jpg" data-action="zoom">
+                <h6>Termibeaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/13_kim_beaud-ill.jpg" data-action="zoom">
+                <h6>Kim Beaud Ill</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/14_robin.jpg" data-action="zoom">
+                <h6>Rob-in.</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/15_willy-beaudry.jpg" data-action="zoom">
+                <h6>Willy Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/16_beaudry-time.jpg" data-action="zoom">
+                <h6>Beaudry Time</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/17_rob-daly.jpg" data-action="zoom">
+                <h6>Rob Daly</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/18_rob-beaud.jpg" data-action="zoom">
+                <h6>Beaud. Rob Beaud.</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/19_razor-robert.jpg" data-action="zoom">
+                <h6>Razor Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/20_beaudney-spears.jpg" data-action="zoom">
+                <h6>Beaudney Spears: Oops, Beaud did it again...</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/21_beaudrat.jpg" data-action="zoom">
+                <h6>Beaudrat</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/22_grease_beaudry.jpg" data-action="zoom">
+                <h6>Grease Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/23_elf-beaudry.jpg" data-action="zoom">
+                <h6>Elf Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/24_slim-beaudry.jpg" data-action="zoom">
+                <h6>Slim Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/25_marylin-beaudroe.jpg" data-action="zoom">
+                <h6>Marilyn Beaudroe</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/26_pope-beaudry.jpg" data-action="zoom">
+                <h6>Pope Beaudris</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/27_Dr-Beaudevil.jpg" data-action="zoom">
+                <h6>Dr. BeaudrEvil</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/28_ironrob.jpg" data-action="zoom">
+                <h6>IronRob</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/29_tybeaudrion.jpg" data-action="zoom">
+                <h6>Tybaudrion</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/30_roberto-beauscobar.jpg" data-action="zoom">
+                <h6>Roberto Beauscobar</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/31_beaudresus.jpg" data-action="zoom">
+                <h6>Beaudresus</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/32_retirement-hobbies.jpg" data-action="zoom">
+                <h6>Retirement hobbies</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/33_mr-B.jpg" data-action="zoom">
+                <h6>Mr. B</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/34_beaud-lee.jpg" data-action="zoom">
+                <h6>Beau Lee</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/35_muhammad-beaudry.jpg" data-action="zoom">
+                <h6>Muhammad Beaudli</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/36_beaud-dogg.jpg" data-action="zoom">
+                <h6>Beaud Dogg</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/37_whos-beaud.jpg" data-action="zoom">
+                <h6>Who's Beaud?!</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/38_robert-simmons.jpg" data-action="zoom">
+                <h6>Robert Simmons</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/39_beaudrump.jpg" data-action="zoom">
+                <h6>Beaudrump</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/40_helen-beaudley.jpg" data-action="zoom">
+                <h6>Helen Beaudley</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/41_captain-beaud.jpg" data-action="zoom">
+                <h6>Captain Beaud</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/42_clint-beaudwood.jpg" data-action="zoom">
+                <h6>Clint Beaudwood</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/42_beau-sparrow.jpg" data-action="zoom">
+                <h6>Beau Sparrow</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/43_kung-beaudry.jpg" data-action="zoom">
+                <h6>Beaufury</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/44_the-beauding.jpg" data-action="zoom">
+                <h6>The Beauding</h6></div>
+            <!--<div class="grid-item"><img class="img-responsive lazy" src="dist/img/45_joker-beaudry.jpg" data-action="zoom"><h6>The Joker Beaudry</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/46_beaudron.jpg" data-action="zoom"><h6>Beaudron</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/48_beaudry-with-children.jpg" data-action="zoom"><h6>Beaudry with Children/h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/49_beaudgun.jpg" data-action="zoom"><h6>Beaudgun</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/50_beaud-mcqueen.jpg" data-action="zoom"><h6>Beaud McQueen</h6></div>
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/51_time-person-of-the-year-beaudry.jpg" data-action="zoom"><h6>Innovator of the Year</h6></div>-->
         </div>
 
         <!-- FOOTER -->
         <footer>
             <p class="pull-right"><a href="#">Back to top</a></p>
-            <p><a href="http://loogart.com">&copy; 2017 Loogart.com</a></p>
+            <p><a href="http://loogart.com">&copy; 2017 Photoshop and website by Loogart</a></p>
         </footer>
 
     </div>
