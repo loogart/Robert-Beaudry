@@ -32,6 +32,7 @@
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/zoom.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -99,6 +100,12 @@
             color: #4db44d;
         }
         
+        section.story a:hover,
+        section.story a:active {
+            color: #4db44d;
+            text-decoration: none;
+        }
+        
         .lazy {
             width: 100%;
             height: 100%;
@@ -115,6 +122,23 @@
         .grid-item--width2 {
             width: 66.67%;
             padding: 8px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2.5%;
+        }
+        
+        footer a,
+        footer a:visited {
+            color: #e5e5e5;
+        }
+        
+        footer a:hover,
+        footer a:active {
+            color: #4db44d;
+            text-decoration: none;
         }
         
         @media (max-width:767px) {
@@ -143,7 +167,7 @@
 ================================================== -->
 
 <body>
-
+    <a name="helloRobert"></a>
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom:0">
@@ -153,13 +177,18 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
-
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="jumbotron item active img-carousel text-center j1" style="background-image:url('dist/img/7_heisenbeaud.jpg');">
                 <div class="container">
                     <h1>50 Shades of Beaudry</h1>
                     <h3 class="hidden-xs">Say my name.</h3>
+                </div>
+            </div>
+            <div class="jumbotron item img-carousel img-carousel text-center j1" style="background-image:url('dist/img/robert-photo-team-final.jpg');">
+                <div class="container">
+                    <h3 class="hidden-xs" style="text-shadow:0 0 0 rgba(0,0,0,0);">This is how we win GTEC awards.</h3>
+                    <h1 style="position:absolute;bottom:20px;left:20px;text-shadow:0 0 0 rgba(0,0,0,0);font-size:8vw;text-align:left">HAPPY RETIREMENT</h1>
                 </div>
             </div>
             <div class="jumbotron item img-carousel img-carousel text-center j1" style="background-image:url('dist/img/25_marylin-beaudroe.jpg');">
@@ -172,12 +201,6 @@
                 <div class="container">
                     <h1>Beau Lee</h1>
                     <h3 class="hidden-xs">Enter the InnoLab.</h3>
-                </div>
-            </div>
-            <div class="jumbotron item img-carousel img-carousel text-center j1" style="background-image:url('dist/img/robert-photo-team-final.jpg');">
-                <div class="container">
-                    <h3 class="hidden-xs" style="text-shadow:0 0 0 rgba(0,0,0,0);">This is how we win GTEC awards.</h3>
-                    <h1 style="position:absolute;bottom:20px;left:20px;text-shadow:0 0 0 rgba(0,0,0,0);font-size:12vw;text-align:left">I LOVE MY JOB</h1>
                 </div>
             </div>
         </div>
@@ -203,6 +226,9 @@
                 <div class="col-md-6 col-md-offset-3">
                     <h2>Hi Robert ;)</h2>
                     <p><i>50 Shades of Beaudry</i> chronicles fifty days of Robert Beaudry's alter egos brought to you by your friends at Global Affairs Canada. This collection is dedicated to an awesome colleagueand friend, Robert Beaudry. <a href="https://twitter.com/search?q=%23govlife&src=typd" target="_blank">#GovLife</a></p>
+                    <blockquote class="twitter-tweet" data-lang="en">
+                        <p lang="en" dir="ltr">When you fix 1 bug in your code, but create 17 new ones. <a href="https://twitter.com/hashtag/govlife?src=hash">#govlife</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash">#CodeNewbie</a> <a href="https://t.co/MP8OWpbdho">pic.twitter.com/MP8OWpbdho</a></p>&mdash; Chris Soueidan (@iamloogart) <a href="https://twitter.com/iamloogart/status/827533397383905280">February 3, 2017</a></blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </section>
@@ -309,18 +335,15 @@
                 <h6>Beaudgun</h6></div>
             <div class="grid-item"><img class="img-responsive lazy" src="dist/img/50_beaud-mcqueen.jpg" data-action="zoom">
                 <h6>Beaud McQueen</h6></div>
-            <!--<div class="grid-item"><img class="img-responsive lazy" src="dist/img/51_time-person-of-the-year-beaudry.jpg" data-action="zoom"><h6>Innovator of the Year</h6></div>-->
+            <div class="grid-item"><img class="img-responsive lazy" src="dist/img/51_time-person-of-the-year-beaudry.jpg" data-action="zoom"><h6>Innovator of the Year</h6></div>
         </div>
-
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p><a href="http://loogart.com">&copy; 2017 Photoshop and website by Loogart</a></p>
-        </footer>
-
     </div>
-    <!-- /.container -->
 
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#" id="link"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a></p>
+        <p><a href="http://loogart.com">&copy; 2017 Photoshop and website by Loogart</a></p>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -338,6 +361,16 @@
         // layout Masonry after each image loads
         $grid.imagesLoaded().progress(function () {
             $grid.masonry('layout');
+        });
+        // jquery scroll
+        function scrollToAnchor(aid) {
+            var aTag = $("a[name='" + aid + "']");
+            $('html,body').animate({
+                scrollTop: aTag.offset().top
+            }, 'slow');
+        }
+        $("#link").click(function () {
+            scrollToAnchor('helloRobert');
         });
     </script>
 </body>
